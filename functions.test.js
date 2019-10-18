@@ -2,6 +2,7 @@ const capitalize = require('./modules/capitalize');
 const reverseString = require('./modules/reverse-string');
 const Calculator = require('./modules/calculator');
 const caesar = require('./modules/caesar-cipher');
+const arrayAnalysis = require('./modules/array-analysis');
 
 //  jest working
 it('Works', () => {
@@ -55,3 +56,25 @@ test("Caesar cipher is case sensitive on 10 shift", () => {
 test("Caesar cipher works with punctuation", () => {
     expect(caesar('meow!', 10)).toBe('woygE')
 })
+
+//      Array Analysis function test
+
+
+
+let arrayTestObject = arrayAnalysis([1, 2, 3, 4, 5, 6, 7])
+test("Array Analysis calculates array average", () => {
+    expect(arrayTestObject['average']).toBe(4)
+})
+
+test("Array Analysis calculates array min", () => {
+    expect(arrayTestObject['min']).toBe(1)
+})
+
+test("Array Analysis calculates array max", () => {
+    expect(arrayTestObject['max']).toBe(7)
+})
+
+test("Array Analysis calculates array length", () => {
+    expect(arrayTestObject['length']).toBe(7)
+})
+
